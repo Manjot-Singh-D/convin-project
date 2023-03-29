@@ -26,9 +26,8 @@ const CardPage = () => {
   const data = useSelector((state) => {
     return state.users;
   });
-
   if (data.length === 0) {
-    window.location.href = "/";
+    window.location.replace(window.location.origin);
   }
   const cardDetails = data[bucketIndex].cardDetails;
 
